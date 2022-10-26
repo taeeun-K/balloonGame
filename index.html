@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>풍선게임</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script defer src="./js/function.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div class="loading">
+      <p>로딩중</p>
+    </div>
+
+    <header>
+      <h1>풍선터트리기</h1>
+    </header>
+
+    <section class="game">
+      <div class="mode-box">
+        <button class="modeBtn easy on" onclick="levelSetting('easy',this)">EASY</button>
+        <button class="modeBtn normal" onclick="levelSetting('normal',this)">NORMAL</button>
+        <button class="modeBtn hard" onclick="levelSetting('hard',this)">HARD</button>                
+      </div>
+
+      <h2>START 버튼을 누르면 게임이 시작됩니다. 풍선을 터트려보세요~!</h2>
+
+      <div class="game-box">
+        <div id="ballBox"></div>
+        <div class="present"></div>
+      </div>
+
+      <button class="start" onclick="init()">START</button>
+      <strong class="score"><em id="scoreNum">0</em> 점</strong>
+    </section>
+
+    <footer>
+      <address>&copy; Designed by 2조</address>
+    </footer>
+  </div>
+</body>
+</html>
